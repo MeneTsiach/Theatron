@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#123147">
+
+    <TextView
+        android:id="@+id/viewTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Επικοινωνία με το Theatron"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:fontFamily="@font/unageo"
+        android:gravity="center"
+        android:layout_marginBottom="12dp" />
+
+    <!-- Τηλέφωνο -->
+    <TextView
+        android:id="@+id/contactPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="14dp"
+        android:text="Τηλέφωνο: 210 1234 567"
+        android:textColor="@android:color/white"
+        android:textSize="15sp"
+        android:fontFamily="@font/unageo"
+        android:autoLink="phone"
+        android:layout_marginBottom="12dp"
+        android:backgroundTint="@color/white" />
+
+    <!-- Email -->
+    <TextView
+        android:id="@+id/contactEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="14dp"
+        android:text="Email: info@theatron.gr"
+        android:textColor="@android:color/white"
+        android:textSize="15sp"
+        android:fontFamily="@font/unageo"
+        android:autoLink="email"
+        android:layout_marginBottom="12dp" />
+
+    <!-- Διεύθυνση -->
+    <TextView
+        android:id="@+id/contactAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="14dp"
+        android:text="Βουλής 13, Αθήνα"
+        android:textColor="#00d8c4"
+        android:textSize="15sp"
+        android:fontFamily="@font/unageo"
+        android:layout_marginBottom="12dp" />
+
+    <!-- Κλείσιμο -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonCloseContact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Κλείσιμο"
+        android:textSize="11sp"
+        android:textAllCaps="false"
+        android:fontFamily="@font/cocogoose"
+        android:backgroundTint="#cb514d"
+        app:cornerRadius="12dp"
+        android:layout_gravity="center" />
+</LinearLayout>

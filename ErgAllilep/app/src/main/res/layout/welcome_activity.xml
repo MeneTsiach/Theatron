@@ -1,0 +1,123 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/welcome_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    android:background="@drawable/gradient_background"
+    tools:context=".Welcome">
+
+    <!-- Λογότυπο -->
+    <ImageView
+        android:id="@+id/theatron"
+        android:layout_width="261dp"
+        android:layout_height="141dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="120dp"
+        android:src="@drawable/theatron" />
+
+    <!-- Εναλλαγή Προβολής -->
+    <ImageView
+        android:id="@+id/toggleViewIcon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="48dp"
+        android:src="@drawable/cached_24px"
+        app:tint="#804141" />
+
+    <!-- Κοινό Container για κουμπί και εναλλακτικά κουμπιά -->
+    <FrameLayout
+        android:id="@+id/switchableContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/theatron"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp">
+
+        <!-- Κουμπί Chat -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/startChatButton"
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+            android:backgroundTint="@color/button_blue"
+            android:text="Shakespeare AI"
+            android:fontFamily="@font/cocogoose"
+            android:textAllCaps="false"
+            app:cornerRadius="7dp" />
+
+        <!-- Τα υπόλοιπα κουμπιά (αρχικά κρυφά) -->
+        <LinearLayout
+            android:id="@+id/extraButtonsContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:visibility="gone">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnBook"
+                android:layout_width="wrap_content"
+                android:layout_height="55dp"
+                android:text="Κράτηση Θέσης"
+                android:fontFamily="@font/cocogoose"
+                android:textSize="15sp"
+                android:textAllCaps="false"
+                android:backgroundTint="@color/button_blue"
+                app:cornerRadius="7dp"
+                android:layout_marginTop="0dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="55dp"
+                android:text="Ακύρωση Κράτησης"
+                android:fontFamily="@font/cocogoose"
+                android:textSize="15sp"
+                android:textAllCaps="false"
+                android:backgroundTint="@color/button_blue"
+                app:cornerRadius="7dp"
+                android:layout_marginTop="8dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnView"
+                android:layout_width="wrap_content"
+                android:layout_height="55dp"
+                android:text="Προβολή Κρατήσεων"
+                android:fontFamily="@font/cocogoose"
+                android:textSize="15sp"
+                android:textAllCaps="false"
+                android:backgroundTint="@color/button_blue"
+                app:cornerRadius="7dp"
+                android:layout_marginTop="8dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnContact"
+                android:layout_width="wrap_content"
+                android:layout_height="55dp"
+                android:text="Επικοινωνία"
+                android:fontFamily="@font/cocogoose"
+                android:textSize="15sp"
+                android:textAllCaps="false"
+                android:backgroundTint="@color/button_blue"
+                app:cornerRadius="7dp"
+                android:layout_marginTop="8dp"/>
+        </LinearLayout>
+    </FrameLayout>
+
+    <!-- Υποσημείωση -->
+    <TextView
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="12dp"
+        android:gravity="center"
+        android:fontFamily="@font/unageo"
+        android:text="Εφαρμογή για το μάθημα «Αλληλεπίδραση Ανθρώπου Υπολογιστή», Εαρινό Εξάμηνο 24/25"
+        android:textColor="@color/black"
+        android:textSize="12sp" />
+
+</RelativeLayout>

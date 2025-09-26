@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#123147">
+
+    <!-- Παράσταση -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:endIconTint="@color/black"
+        android:hint=" "
+        app:boxBackgroundMode="filled"
+        app:boxBackgroundColor="@color/white"
+        app:endIconMode="dropdown_menu"
+        app:boxStrokeColor="@android:color/transparent"
+        app:boxStrokeWidth="0dp"
+        app:boxCornerRadiusTopStart="12dp"
+        app:boxCornerRadiusTopEnd="12dp"
+        app:boxCornerRadiusBottomStart="12dp"
+        app:boxCornerRadiusBottomEnd="12dp">
+
+        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+            android:id="@+id/inputPlay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:fontFamily="@font/unageo"
+            android:hint="Παράσταση"
+            android:textColorHint="@color/black"
+            android:inputType="none"
+            android:focusable="false"
+            android:clickable="true"
+            android:padding="12dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Ημερομηνία -->
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:hint=" "
+        app:endIconTint="@color/black"
+        app:boxBackgroundColor="@color/white"
+        app:endIconMode="dropdown_menu"
+        app:boxStrokeColor="@android:color/transparent"
+        app:boxStrokeWidth="0dp"
+        app:boxCornerRadiusTopStart="12dp"
+        app:boxCornerRadiusTopEnd="12dp"
+        app:boxCornerRadiusBottomStart="12dp"
+        app:boxCornerRadiusBottomEnd="12dp">
+
+        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+            android:id="@+id/inputDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:hint="Ημερομηνία"
+            android:textColorHint="@color/black"
+            android:fontFamily="@font/unageo"
+            android:inputType="none"
+            android:focusable="false"
+            android:clickable="true"
+            android:padding="12dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Ώρα -->
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:hint=" "
+        app:boxBackgroundMode="filled"
+        app:boxBackgroundColor="@color/white"
+        app:boxStrokeColor="@android:color/transparent"
+        app:endIconMode="dropdown_menu"
+        app:endIconTint="@color/black"
+        app:boxStrokeWidth="0dp"
+        app:boxCornerRadiusTopStart="12dp"
+        app:boxCornerRadiusTopEnd="12dp"
+        app:boxCornerRadiusBottomStart="12dp"
+        app:boxCornerRadiusBottomEnd="12dp">
+
+        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+            android:id="@+id/inputTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:fontFamily="@font/unageo"
+            android:hint="Ώρα"
+            android:textColorHint="@color/black"
+            android:inputType="none"
+            android:focusable="false"
+            android:clickable="true"
+            android:padding="12dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Email -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:hint="Email"
+        android:textColorHint="@color/black"
+        app:boxBackgroundMode="filled"
+        app:boxBackgroundColor="@color/white"
+        app:boxStrokeColor="@android:color/transparent"
+        app:boxStrokeWidth="0dp"
+        app:boxCornerRadiusTopStart="12dp"
+        app:boxCornerRadiusTopEnd="12dp"
+        app:boxCornerRadiusBottomStart="12dp"
+        app:boxCornerRadiusBottomEnd="12dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/inputEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/darker_gray"
+            android:fontFamily="@font/unageo"
+            android:paddingBottom="10dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Επιλογή Θέσης -->
+    <Button
+        android:id="@+id/btnSelectSeat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Επιλογή Θέσης"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#4CAF50"
+        android:textColor="@android:color/white"
+        android:fontFamily="@font/unageo" />
+
+    <!-- Επιλογή Πληρωμής -->
+    <RadioGroup
+        android:id="@+id/paymentOptions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="16dp">
+
+        <RadioButton
+            android:id="@+id/radioCash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Πληρωμή στο ταμείο"
+            android:textColor="@android:color/white"
+            android:fontFamily="@font/unageo" />
+
+        <RadioButton
+            android:id="@+id/radioOnline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ηλεκτρονική πληρωμή"
+            android:textColor="@android:color/white"
+            android:fontFamily="@font/unageo" />
+    </RadioGroup>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/cardInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:hint="Αριθμός κάρτας και PIN (π.χ. 12345 4321)"
+        android:visibility="gone"
+        android:textColorHint="@color/black"
+        app:boxBackgroundMode="filled"
+        app:boxBackgroundColor="@color/white"
+        app:boxStrokeColor="@android:color/transparent"
+        app:boxStrokeWidth="0dp"
+        app:boxCornerRadiusTopStart="12dp"
+        app:boxCornerRadiusTopEnd="12dp"
+        app:boxCornerRadiusBottomStart="12dp"
+        app:boxCornerRadiusBottomEnd="12dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/cardInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/darker_gray"
+            android:fontFamily="@font/unageo"
+            android:background="@null"
+            android:paddingBottom="10dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <!-- Κουμπιά Επιβεβαίωσης / Ακύρωσης -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="16dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonCancelSeat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ακύρωση"
+            android:textSize="11sp"
+            android:textAllCaps="false"
+            android:fontFamily="@font/cocogoose"
+            android:backgroundTint="#cb514d"
+            app:cornerRadius="12dp"
+            android:layout_marginEnd="16dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonConfirmSeat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Επιβεβαίωση"
+            android:textSize="11sp"
+            android:textAllCaps="false"
+            app:cornerRadius="12dp"
+            android:fontFamily="@font/cocogoose"
+            android:backgroundTint="@color/button_blue"/>
+    </LinearLayout>
+</LinearLayout>

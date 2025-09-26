@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="#123147"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!-- Τίτλος -->
+    <TextView
+        android:id="@+id/viewTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Όλες οι Κρατήσεις ανά Email"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:fontFamily="@font/unageo"
+        android:gravity="center"
+        android:layout_marginBottom="12dp" />
+
+    <!-- Λίστα Κρατήσεων -->
+    <ListView
+        android:id="@+id/allBookingsList"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="4dp"
+        android:dividerHeight="1dp"
+        android:background="@android:color/white"
+        android:cacheColorHint="@android:color/transparent"
+        android:padding="2dp" />
+
+    <!-- Κουμπί Κλεισίματος -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonCloseAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Κλείσιμο"
+        android:fontFamily="@font/cocogoose"
+        android:textSize="11sp"
+        android:textAllCaps="false"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#cb514d"
+        android:textColor="@android:color/white"
+        app:cornerRadius="12dp"
+        app:iconPadding="4dp"
+        app:iconTint="@android:color/white" />
+</LinearLayout>
